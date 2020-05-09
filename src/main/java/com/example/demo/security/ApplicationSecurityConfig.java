@@ -54,7 +54,7 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
                     .usernameParameter("username")
                 .and()
                 .rememberMe()
-                    .tokenValiditySeconds((int) TimeUnit.DAYS.toSeconds(21))
+                    .tokenValiditySeconds((int) TimeUnit.DAYS.toSeconds(21)) //con esto le decimos que en lugar de 2 week, dure 21 días, o sea 3 week
                     .key("somethingverysecured")
                     .rememberMeParameter("remember-me")
                 .and()
