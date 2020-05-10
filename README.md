@@ -15,3 +15,6 @@ Lo que hace spring security es generar un CSRF token cuando un usuario se loguea
 
 X-XSRF-TOKEN -> esta es la cookie que devuelve el back con el token generado, con el postman podemos verla desde "cookies" y copiar el token y usarlo en otra llamada.
 
+El remember me por default dura 2 weeks. se puede usar tokenValiditySeconds o tokenRepository (este es por si estamos usando nuestra propia base de datos).
+
+esta propiedad la tengo que quitar logoutRequestMatcher si tengo habilitado el csrf, porque esta propiedad (logoutRequestMatcher) es para usar el logout como get y no post...cosa que no está bien, pero para pruebas en local no pasa nada.
